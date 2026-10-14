@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { heroPhoto, metiers, photos, selectedWorks } from "@/data/catalogue";
+import { heroPhoto, metiers, selectedWorks } from "@/data/catalogue";
 
 export const metadata: Metadata = {
   title: { absolute: "Cuisines et aménagements sur mesure au Sénégal | Sénégal Découpe Services" },
@@ -75,14 +75,9 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="metiers" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
-        <div className="flex flex-col gap-4 border-t border-ink pt-6 md:flex-row md:items-end md:justify-between">
-          <h2 id="metiers" className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Nos métiers
-          </h2>
-          <p className="max-w-md text-stone">
-            Du plan de travail à la porte d’entrée, {photos.length} réalisations classées par savoir-faire.
-          </p>
-        </div>
+        <h2 id="metiers" className="border-t border-ink pt-6 text-3xl font-semibold tracking-tight md:text-4xl">
+          Nos métiers
+        </h2>
         <ul className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-6 md:gap-y-10">
           {metiers.map((m) => (
             <li key={m.title} className={m.wide ? "col-span-2" : ""}>
@@ -96,10 +91,11 @@ export default function Home() {
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
-                <div className="mt-3 flex items-baseline justify-between gap-3 border-b border-line pb-3 transition-colors group-hover:border-accent">
-                  <h3 className={`font-medium ${m.wide ? "text-xl md:text-2xl" : "text-base md:text-lg"}`}>{m.title}</h3>
-                  <span className="shrink-0 text-sm text-stone">{m.count}</span>
-                </div>
+                <h3
+                  className={`mt-3 border-b border-line pb-3 font-medium transition-colors group-hover:border-accent ${m.wide ? "text-xl md:text-2xl" : "text-base md:text-lg"}`}
+                >
+                  {m.title}
+                </h3>
               </Link>
             </li>
           ))}

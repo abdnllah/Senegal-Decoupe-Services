@@ -53,17 +53,13 @@ export function photo(slug: CategorySlug, n: number): Photo {
   return p;
 }
 
-export function countFor(slug: CategorySlug) {
-  return photos.filter((p) => p.category === slug).length;
-}
-
 export const heroPhoto = photo("cuisine-americaine", 24);
 
-type Metier = { title: string; href: string; cover: Photo; count: number; wide?: boolean };
+type Metier = { title: string; href: string; cover: Photo; wide?: boolean };
 
 function metier(slug: CategorySlug, wide = false): Metier {
   const c = categories.find((x) => x.slug === slug)!;
-  return { title: c.title, href: `/catalogue/?cat=${slug}`, cover: photo(slug, c.cover), count: countFor(slug), wide };
+  return { title: c.title, href: `/catalogue/?cat=${slug}`, cover: photo(slug, c.cover), wide };
 }
 
 // Home "Métiers" index. Doors are grouped here but stay separate filters in the catalogue.
@@ -76,7 +72,6 @@ export const metiers: Metier[] = [
     title: "Portes alu et bois",
     href: "/catalogue/?cat=portes-alu",
     cover: photo("portes-alu", 17),
-    count: countFor("portes-alu") + countFor("portes-bois"),
   },
   metier("lits-armoires"),
   metier("meubles-bureau", true),
