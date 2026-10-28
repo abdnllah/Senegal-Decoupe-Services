@@ -46,6 +46,7 @@ const businessLd = {
       image: `${site.url}${heroPhoto.src}`,
       description: site.description,
       telephone: `+${site.whatsapp}`,
+      sameAs: [site.social.instagram.url, site.social.tiktok.url],
       address: {
         "@type": "PostalAddress",
         addressLocality: site.address.city,

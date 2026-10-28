@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { nav, site, telLink, waLink } from "@/config/site";
 import { Logo } from "./Logo";
+import { SocialButtons } from "./SocialIcons";
 
 export function Footer() {
   return (
@@ -11,6 +12,7 @@ export function Footer() {
           <p className="mt-5 max-w-sm text-sm leading-relaxed">
             Cuisines, dressings, meubles et aménagements sur mesure, conçus et fabriqués au Sénégal.
           </p>
+          <SocialButtons className="mt-6 text-white" />
         </div>
         <nav aria-label="Pied de page">
           <h2 className="text-xs font-medium tracking-widest text-white/50 uppercase">Pages</h2>

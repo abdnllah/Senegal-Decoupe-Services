@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { AmbientVideo } from "@/components/AmbientVideo";
+import { DressingFeature } from "@/components/DressingFeature";
+import { InstagramEmbed } from "@/components/InstagramEmbed";
+import { SocialButtons } from "@/components/SocialIcons";
+import { TravauxRail } from "@/components/TravauxRail";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { site } from "@/config/site";
 import { heroPhoto, metiers, selectedWorks } from "@/data/catalogue";
+import { heroVideo, meubleTvVideo } from "@/data/videos";
+
+const instagramReel = "https://www.instagram.com/reel/C5y4jLutGoV/";
 
 export const metadata: Metadata = {
   title: { absolute: "Cuisines et aménagements sur mesure au Sénégal | Sénégal Découpe Services" },
@@ -50,6 +59,11 @@ export default function Home() {
           preload
           sizes="100vw"
           className="-z-10 object-cover object-[50%_60%]"
+        />
+        <AmbientVideo
+          src={heroVideo.src}
+          fadeIn
+          className="absolute inset-0 -z-10 size-full object-cover object-[50%_40%]"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/55 to-ink/30" aria-hidden="true" />
         <div className="mx-auto w-full max-w-7xl px-5 pt-32 pb-14 md:px-8 md:pb-20">
@@ -111,6 +125,16 @@ export default function Home() {
             <p className="mt-5 max-w-sm leading-relaxed text-white/70">
               Pas d’intermédiaire. Le même interlocuteur suit votre projet du premier rendez-vous à l’installation.
             </p>
+            <figure className="mt-10 hidden max-w-xs md:block">
+              <AmbientVideo
+                src={meubleTvVideo.src}
+                poster={meubleTvVideo.poster}
+                className="aspect-[2/3] w-full bg-white/5 object-cover"
+              />
+              <figcaption className="mt-3 border-l-2 border-accent pl-3 text-sm text-white/60">
+                {meubleTvVideo.title}
+              </figcaption>
+            </figure>
           </div>
           <ol className="border-l border-white/20">
             {atelier.map((step) => (
@@ -123,6 +147,36 @@ export default function Home() {
           </ol>
         </div>
       </section>
+
+      <section aria-labelledby="dressing-video" className="mx-auto max-w-7xl px-5 pt-20 md:px-8 md:pt-28">
+        <div className="grid items-center gap-10 md:grid-cols-[1fr_1.2fr] md:gap-16">
+          <div>
+            <p className="text-xs font-medium tracking-widest text-accent uppercase">En vidéo</p>
+            <h2 id="dressing-video" className="mt-3 text-3xl font-semibold tracking-tight text-balance md:text-4xl">
+              Un dressing pensé jusqu’au dernier tiroir
+            </h2>
+            <p className="mt-5 max-w-md leading-relaxed text-stone">
+              Penderie escamotable, porte-pantalons coulissant, tiroirs à bijoux, planche à repasser intégrée :
+              faites le tour d’un dressing équipé par notre atelier.
+            </p>
+            <WhatsAppButton className="mt-8" message="Bonjour SDS, je souhaite un devis pour un dressing sur mesure.">
+              Un dressing comme celui-ci
+            </WhatsAppButton>
+          </div>
+          <DressingFeature />
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-7xl px-5 pt-16 md:hidden">
+        <figure>
+          <AmbientVideo
+            src={meubleTvVideo.src}
+            poster={meubleTvVideo.poster}
+            className="aspect-[4/5] w-full bg-line object-cover"
+          />
+          <figcaption className="mt-3 border-l-2 border-accent pl-3 text-sm text-stone">{meubleTvVideo.title}</figcaption>
+        </figure>
+      </div>
 
       <section aria-labelledby="equipe">
         <div className="mx-auto max-w-7xl px-5 pt-20 md:px-8 md:pt-28">
@@ -162,6 +216,28 @@ export default function Home() {
             </li>
           ))}
         </ul>
+        <div className="mt-16 md:mt-24">
+          <TravauxRail />
+        </div>
+      </section>
+
+      <section aria-labelledby="instagram" className="bg-ink text-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-[1.2fr_1fr] md:px-8 md:py-28">
+          <div>
+            <p className="text-xs font-medium tracking-widest text-accent uppercase">Suivez-nous</p>
+            <h2 id="instagram" className="mt-3 text-3xl font-semibold tracking-tight text-balance md:text-4xl">
+              Nos derniers chantiers, chaque semaine sur Instagram et TikTok
+            </h2>
+            <p className="mt-5 max-w-md leading-relaxed text-white/70">
+              Poses, finitions, avant/après : suivez @{site.social.instagram.handle} pour voir nos réalisations au fil
+              des projets.
+            </p>
+            <SocialButtons className="mt-8 text-white" />
+          </div>
+          <div className="flex justify-center md:justify-end">
+            <InstagramEmbed url={instagramReel} />
+          </div>
+        </div>
       </section>
 
       <section aria-labelledby="devis" className="border-t-4 border-accent bg-paper">

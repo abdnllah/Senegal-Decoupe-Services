@@ -17,6 +17,10 @@ export const site = {
   opens: "08:00",
   closes: "17:00",
   locale: "fr_SN",
+  social: {
+    instagram: { handle: "senegal_decoupes_services_", url: "https://www.instagram.com/senegal_decoupes_services_/" },
+    tiktok: { handle: "sngal.dcoupe.servi", url: "https://www.tiktok.com/@sngal.dcoupe.servi" },
+  },
 } as const;
 
 const defaultWhatsAppMessage = "Bonjour SDS, je souhaite un devis pour un projet sur mesure.";
