@@ -47,8 +47,6 @@ export default function ContactPage() {
           <div>
             <dt className="text-xs font-medium tracking-widest text-stone uppercase">Adresse</dt>
             <dd className="mt-2">
-              {site.address.street}
-              <br />
               {site.address.city}, {site.address.countryName}
             </dd>
           </div>

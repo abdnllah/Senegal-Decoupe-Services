@@ -8,7 +8,6 @@ export const site = {
   whatsapp: "221773614745",
   phoneDisplay: "+221 77 361 47 45",
   address: {
-    street: "Adresse à confirmer",
     city: "Dakar",
     country: "SN",
     countryName: "Sénégal",
