@@ -83,7 +83,7 @@ export default function Home() {
 
       <section aria-labelledby="metiers" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <h2 id="metiers" className="border-t border-ink pt-6 text-3xl font-semibold tracking-tight md:text-4xl">
-          Nos métiers
+          Notre savoir-faire
         </h2>
         <ul className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-6 md:gap-y-10">
           {metiers.map((m) => (

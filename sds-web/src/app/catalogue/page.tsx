@@ -48,8 +48,8 @@ export default function CataloguePage() {
       <div className="max-w-3xl">
         <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">Catalogue</h1>
         <p className="mt-4 text-lg leading-relaxed text-stone">
-          {photos.length} réalisations et modèles en {categories.length} catégories. Chaque pièce est adaptée à vos
-          dimensions, vos matériaux et vos finitions.
+          Les images présentées appartiennent à leurs propriétaires respectifs et sont utilisées uniquement à titre de
+          référence et d’inspiration visuelle.
         </p>
       </div>
 
