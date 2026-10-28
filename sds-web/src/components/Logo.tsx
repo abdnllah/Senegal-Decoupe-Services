@@ -1,7 +1,7 @@
 import { logoShapes } from "./logo-shapes.generated";
 
 // Charcoal parts follow the text colour (ink on paper, white on photos); orange parts use the accent.
-export function Logo({ className, title = "Sénégal Découpe Services" }: { className?: string; title?: string }) {
+export function Logo({ className, title = "Sénégal Découpes Services" }: { className?: string; title?: string }) {
   return (
     <svg viewBox="0 15 1800 975" className={className} role="img" aria-label={title} fillRule="evenodd">
       {logoShapes.map((s, i) => {

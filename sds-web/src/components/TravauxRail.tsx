@@ -36,8 +36,8 @@ export function TravauxRail() {
         className="mt-8 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-4 [scrollbar-width:thin] md:scroll-px-8 md:gap-6 md:px-8 xl:px-[max(2rem,calc((100vw-80rem)/2+2rem))] xl:scroll-px-[max(2rem,calc((100vw-80rem)/2+2rem))]"
       >
         {travaux.map((v, i) => (
-          <li key={v.src} className="w-[85vw] shrink-0 snap-start sm:w-[60vw] md:w-[44vw] lg:w-[34rem]">
-            <div className="relative aspect-video overflow-hidden bg-ink">
+          <li key={v.src} className="aspect-[9/16] h-[min(32rem,68svh)] shrink-0 snap-start">
+            <div className="relative size-full overflow-hidden rounded-xs bg-ink">
               {active === i ? (
                 <video
                   src={v.src}

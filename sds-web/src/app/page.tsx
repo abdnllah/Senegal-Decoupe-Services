@@ -9,12 +9,10 @@ import { TravauxRail } from "@/components/TravauxRail";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site } from "@/config/site";
 import { heroPhoto, metiers, selectedWorks } from "@/data/catalogue";
-import { heroVideo, meubleTvVideo } from "@/data/videos";
-
-const instagramReel = "https://www.instagram.com/reel/C5y4jLutGoV/";
+import { meubleTvVideo } from "@/data/videos";
 
 export const metadata: Metadata = {
-  title: { absolute: "Cuisines et aménagements sur mesure au Sénégal | Sénégal Découpe Services" },
+  title: { absolute: "Sénégal Découpes Services | Cuisines et aménagements sur mesure au Sénégal" },
   alternates: { canonical: "/" },
 };
 
@@ -40,11 +38,11 @@ const atelier = [
 const team = [
   {
     src: "/team/equipe-sds-01.jpg",
-    alt: "L’équipe de Sénégal Découpe Services en gilets et casques de chantier, réunie autour de la banderole SDS",
+    alt: "L’équipe de Sénégal Découpes Services en gilets et casques de chantier, réunie autour de la banderole SDS",
   },
   {
     src: "/team/equipe-sds-02.jpg",
-    alt: "Membres de l’équipe Sénégal Découpe Services posant avec la banderole de l’entreprise",
+    alt: "Membres de l’équipe Sénégal Découpes Services posant avec la banderole de l’entreprise",
   },
 ];
 
@@ -60,11 +58,6 @@ export default function Home() {
           sizes="100vw"
           className="-z-10 object-cover object-[50%_60%]"
         />
-        <AmbientVideo
-          src={heroVideo.src}
-          fadeIn
-          className="absolute inset-0 -z-10 size-full object-cover object-[50%_40%]"
-        />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/55 to-ink/30" aria-hidden="true" />
         <div className="mx-auto w-full max-w-7xl px-5 pt-32 pb-14 md:px-8 md:pb-20">
           <div className="max-w-3xl border-l-2 border-accent pl-5 md:pl-8">
@@ -72,7 +65,7 @@ export default function Home() {
               Cuisines et aménagements sur mesure, fabriqués au Sénégal
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
-              Sénégal Découpe Services conçoit et fabrique des cuisines haut de gamme, des dressings, des meubles
+              Sénégal Découpes Services conçoit et fabrique des cuisines haut de gamme, des dressings, des meubles
               et des portes, pensés pour votre espace et posés par notre équipe.
             </p>
           </div>
@@ -129,7 +122,7 @@ export default function Home() {
               <AmbientVideo
                 src={meubleTvVideo.src}
                 poster={meubleTvVideo.poster}
-                className="aspect-[2/3] w-full bg-white/5 object-cover"
+                className="aspect-[9/16] w-full bg-white/5 object-cover"
               />
               <figcaption className="mt-3 border-l-2 border-accent pl-3 text-sm text-white/60">
                 {meubleTvVideo.title}
@@ -167,12 +160,12 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-5 pt-16 md:hidden">
+      <div className="mx-auto max-w-xs px-5 pt-16 md:hidden">
         <figure>
           <AmbientVideo
             src={meubleTvVideo.src}
             poster={meubleTvVideo.poster}
-            className="aspect-[4/5] w-full bg-line object-cover"
+            className="aspect-[9/16] w-full bg-line object-cover"
           />
           <figcaption className="mt-3 border-l-2 border-accent pl-3 text-sm text-stone">{meubleTvVideo.title}</figcaption>
         </figure>
@@ -196,7 +189,7 @@ export default function Home() {
       <section aria-labelledby="realisations" className="py-20 md:py-28">
         <div className="mx-auto flex max-w-7xl items-end justify-between gap-6 px-5 md:px-8">
           <h2 id="realisations" className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Réalisations choisies
+            Quelques idées pour vos prochains travaux…
           </h2>
           <Link href="/catalogue/" className="shrink-0 border-b-2 border-accent pb-1 font-medium">
             Tout le catalogue
@@ -226,7 +219,7 @@ export default function Home() {
           <div>
             <p className="text-xs font-medium tracking-widest text-accent uppercase">Suivez-nous</p>
             <h2 id="instagram" className="mt-3 text-3xl font-semibold tracking-tight text-balance md:text-4xl">
-              Nos derniers chantiers, chaque semaine sur Instagram et TikTok
+              Nos derniers chantiers sur Instagram et TikTok
             </h2>
             <p className="mt-5 max-w-md leading-relaxed text-white/70">
               Poses, finitions, avant/après : suivez @{site.social.instagram.handle} pour voir nos réalisations au fil
@@ -235,7 +228,7 @@ export default function Home() {
             <SocialButtons className="mt-8 text-white" />
           </div>
           <div className="flex justify-center md:justify-end">
-            <InstagramEmbed url={instagramReel} />
+            <InstagramEmbed />
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@ export function DressingFeature() {
       <button
         type="button"
         onClick={open}
-        className="group relative block aspect-square w-full overflow-hidden bg-ink text-left"
+        className="group relative mx-auto block aspect-[9/16] w-full max-w-sm overflow-hidden bg-ink text-left"
         aria-label={`Regarder la vidéo : ${dressingVideo.title}`}
       >
         <AmbientVideo
@@ -40,7 +40,7 @@ export function DressingFeature() {
         aria-label={dressingVideo.title}
         onClose={() => player.current?.pause()}
         onClick={(e) => e.target === e.currentTarget && dialog.current?.close()}
-        className="m-auto w-[min(92vw,80svh)] bg-transparent p-0"
+        className="m-auto w-[min(92vw,calc(82svh*9/16))] bg-transparent p-0"
       >
         <video
           ref={player}
@@ -49,7 +49,7 @@ export function DressingFeature() {
           controls
           playsInline
           preload="none"
-          className="aspect-square w-full bg-ink"
+          className="aspect-[9/16] w-full bg-ink"
         />
         <form method="dialog" className="mt-3 text-center">
           <button className="rounded-xs border border-white/60 px-5 py-2 text-sm text-white hover:bg-white hover:text-ink">

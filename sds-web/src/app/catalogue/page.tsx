@@ -26,7 +26,7 @@ const ld = {
     },
     {
       "@type": "ImageGallery",
-      name: "Catalogue Sénégal Découpe Services",
+      name: "Catalogue Sénégal Découpes Services",
       url: `${site.url}/catalogue/`,
       inLanguage: "fr",
       about: categories.map((c) => c.title),

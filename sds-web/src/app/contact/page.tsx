@@ -8,7 +8,7 @@ import { photo } from "@/data/catalogue";
 export const metadata: Metadata = {
   title: "Contact et devis WhatsApp",
   description:
-    "Demandez un devis pour votre cuisine, dressing ou aménagement sur mesure : écrivez ou appelez Sénégal Découpe Services sur WhatsApp.",
+    "Demandez un devis pour votre cuisine, dressing ou aménagement sur mesure : écrivez ou appelez Sénégal Découpes Services sur WhatsApp.",
   alternates: { canonical: "/contact/" },
   openGraph: { url: "/contact/" },
 };

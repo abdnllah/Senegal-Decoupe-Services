@@ -15,8 +15,8 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Cuisines et aménagements sur mesure au Sénégal | Sénégal Découpe Services",
-    template: "%s | Sénégal Découpe Services",
+    default: "Sénégal Découpes Services | Cuisines et aménagements sur mesure au Sénégal",
+    template: "%s | Sénégal Découpes Services",
   },
   description: site.description,
   applicationName: site.name,  openGraph: {

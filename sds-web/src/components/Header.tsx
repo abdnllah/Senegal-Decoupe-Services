@@ -24,7 +24,7 @@ export function Header() {
       }
     >
       <div className="mx-auto flex h-18 max-w-7xl items-center gap-8 px-5 md:h-20 md:px-8">
-        <Link href="/" aria-label="Sénégal Découpe Services, accueil" className="shrink-0">
+        <Link href="/" aria-label="Sénégal Découpes Services, accueil" className="shrink-0">
           <Logo className="h-10 w-auto md:h-12" />
         </Link>
 

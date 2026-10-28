@@ -1,5 +1,5 @@
 export const site = {
-  name: "Sénégal Découpe Services",
+  name: "Sénégal Découpes Services",
   shortName: "SDS",
   url: "https://sds.sn",
   description:
